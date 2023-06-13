@@ -1,0 +1,211 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400);
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+    background: #42A7A1;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    height: 220px;
+    width: 280px;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 10px 10px 15px 0 rgba(0,0,0,0.3);
+}
+.header{
+    background: #F1BA64;
+    color: #fff;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.header__left {
+}
+
+.header__left-title {
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.header__left-date {
+    font-weight: 400;
+    font-size: 11px;
+}
+
+.header__right {
+    text-align: right;
+}
+
+.header__right-title {
+    font-weight: 400;
+    font-size: 11px;
+}
+
+.header__right-price {
+    font-weight: 600;
+    font-size: 14px;
+}
+.parameters{
+    text-align: right;
+    padding: 12px 15px 12px 15px;
+}
+.parameter{
+    position: relative;
+    font-size: 9px;
+    color: #606060;
+    line-height: 13px;
+}
+.parameter.red{
+    margin-right: 35px;
+}
+.parameter:before{
+    content: '';
+    width: 11px;
+    height: 3px;
+    border-radius: 3px;
+    position: absolute;
+    top: 5px;
+    left: -16px;
+}
+.red:before{
+    background: #FA7373;
+}
+.blue:before{
+    background: #7BA2FF;
+}
+.statistic{
+    position: relative;
+    height: 81px;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.line{
+    position: absolute;
+    left: 10px;
+    right: 0;
+    height: 1px;
+    background: #F2F2F2;
+    width: calc(100% - 20px);
+}
+.line-1{
+    top: 0;
+}
+.line-2{
+    top: 40px;
+}
+.line-3{
+    top: 80px;
+}
+.data svg{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    right: -10px;
+    bottom: 0;
+}
+polyline {
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+.red polyline{
+    stroke: #FA7373;
+}
+.blue polyline{
+    stroke: #7BA2FF;
+}
+.points{
+    position: relative;
+}
+[class^="point-"] {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 10;
+}
+[class^="point-"]:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translate3d(-50%, 0, 0);
+}
+.red [class^="point-"],
+.red .tooltip,
+.red .tooltip:after{
+    background: #FA7373;
+}
+.blue [class^="point-"],
+.blue .tooltip,
+.blue .tooltip:after{
+    background: #7BA2FF;
+}
+.tooltip{
+    position: absolute;
+    bottom: 13px;
+    left: 50%;
+    transform: translate3d(-50%, 10px, 0);
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 11px;
+    color: #fff;
+    padding: 8px 6px;
+    border-radius: 3px;
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.4s ease-out 0s, opacity 0.4s ease-out 0s;
+}
+.tooltip:after{
+    position: absolute;
+    display: block;
+    content: '';
+    height: 6px;
+    width: 6px;
+    left: 50%;
+    margin-left: -3px;
+    bottom: -3px;
+    transform: rotate(45deg);
+}
+.red .point-1 { left: 7px; top: 43px; }
+.red .point-2 { left: 48px; top: 9px; }
+.red .point-3 { left: 88px; top: 20px; }
+.red .point-4 { left: 128px; top: 8px; }
+.red .point-5 { left: 169px; top: 35px; }
+.red .point-6 { left: 209px; top: 45px; }
+.red .point-7 { left: 249px; top: 16px; }
+
+.blue .point-1 { left: 7px; top: 58px; }
+.blue .point-2 { left: 48px; top: 47px; }
+.blue .point-3 { left: 88px; top: 62px; }
+.blue .point-4 { left: 128px; top: 52px; }
+.blue .point-5 { left: 169px; top: 58px; }
+.blue .point-6 { left: 209px; top: 71px; }
+.blue .point-7 { left: 249px; top: 61px; }
+.days{
+    font-size: 9px;
+    color: #949494;
+    line-height: 30px;
+    text-transform: uppercase;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
